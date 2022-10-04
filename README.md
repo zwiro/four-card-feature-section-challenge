@@ -16,8 +16,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Solution](https://your-solution-url.com)
-- Live Site URL: [Live Site](https://your-live-site-url.com)
+- Solution URL: [Solution](https://www.frontendmentor.io/solutions/four-card-feature-section-challenge-grid-with-animation-URQk-hoAD0)
+- Live Site URL: [Live Site](https://zwiro.github.io/four-card-feature-section-challenge/)
 
 ## My process
 
