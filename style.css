@@ -1,0 +1,205 @@
+:root {
+    --border-clr-1: hsl(180, 62%, 55%);
+    --border-clr-2: hsl(0, 78%, 62%);
+    --border-clr-3: hsl(34, 97%, 64%);
+    --border-clr-4: hsl(212, 86%, 64%);
+    --heading-txt-clr: hsl(234, 12%, 34%);
+    --main-txt-clr: hsl(229, 6%, 66%);
+    --bg-clr: hsl(0, 0%, 98%);
+}
+
+html {
+    font-size: 15px;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bg-clr);
+    overflow-x: hidden;
+}
+
+main {
+    min-height: 90vh;
+    display: grid;
+    justify-items: center;
+    gap: 1rem;
+    margin: 5.5rem 2rem;
+    max-width: 100vw;
+}
+
+.top-text {
+    text-align: center;
+}
+
+h1 {
+    font-size: 1.65rem;
+    font-weight: 200;
+    color: var(--heading-txt-clr);
+}
+
+h2 {
+    font-size: 1.65rem;
+    font-weight: 600;
+    color: var(--heading-txt-clr);
+}
+
+.top-text p {
+    font-size: 1rem;
+    color: var(--main-txt-clr);
+    padding: 1rem 0 4rem 0;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 0.25rem 0.25rem 0.5rem 0.5rem;
+    border-top: 3px solid black;
+    padding: 1.5rem;
+    box-shadow: 8px 8px 24px -15px var(--main-txt-clr);
+    width: min(100%, 32rem);
+}
+
+h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--heading-txt-clr);
+}
+
+.card p {
+    font-size: 0.85rem;
+    color: var(--main-txt-clr);
+    padding: 0.5rem 0 2.5rem 0;
+}
+
+img {
+    margin-left: auto;
+}
+
+.card-1 {
+    border-color: var(--border-clr-1);
+}
+
+.card-2 {
+    border-color: var(--border-clr-2);
+}
+
+.card-3 {
+    border-color: var(--border-clr-3);
+}
+
+.card-4 {
+    border-color: var(--border-clr-4);
+}
+
+@media (min-width:1100px) {
+    main {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: auto 1fr 1fr;
+        justify-items: center;
+        gap: 2rem;
+        margin: 5.15rem 11rem 0rem 11rem;
+    }
+
+    .top-text {
+        grid-column: span 3;
+        margin: 0 20rem;
+        align-self: start;
+    }
+
+    h1,
+    h2 {
+        font-size: 2.5rem;
+    }
+
+    .top-text p {
+        padding-bottom: 2.15rem;
+    }
+
+    .card {
+        padding: 2rem;
+        align-self: center;
+        min-height: 16.65rem;
+        max-width: 24rem;
+    }
+
+    .card p {
+        padding: 0.5rem 2.25rem 1.5rem 0;
+        line-height: 2;
+    }
+
+    .card-1,
+    .card-4 {
+        grid-row: span 2;
+        align-self: center;
+    }
+
+    .card-1 {
+        justify-self: end;
+    }
+
+    .card-2 {
+        align-self: end
+    }
+
+    .card-3 {
+        order: 2;
+        align-self: start;
+    }
+
+    .card-4 {
+        justify-self: start;
+    }
+
+}
+
+.card-1,
+.card-2 {
+    transition: background-color 300ms ease-in-out;
+    animation: cardMoveLeft 1s;
+}
+
+.card-3,
+.card-4 {
+    transition: background-color 300ms ease-in-out;
+    animation: cardMoveRight 1s;
+}
+
+
+@media (hover: hover) {
+    .card-1:hover {
+        background-color: hsl(180, 62%, 85%);
+    }
+
+    .card-2:hover {
+        background-color: hsl(0, 78%, 85%);
+    }
+
+    .card-3:hover {
+        background-color: hsl(34, 97%, 85%);
+    }
+
+    .card-4:hover {
+        background-color: hsl(212, 86%, 85%);
+    }
+}
+
+@keyframes cardMoveLeft {
+    0% {
+        transform: translateX(-100%) rotate(360deg);
+    }
+
+    100% {
+        transform: translateX(0%);
+    }
+}
+
+@keyframes cardMoveRight {
+    0% {
+        transform: translateX(100%) rotate(360deg);
+    }
+
+    100% {
+        transform: translateX(0%);
+    }
+}
